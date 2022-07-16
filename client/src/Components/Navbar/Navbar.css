@@ -23,7 +23,7 @@
 .search_container{
     border: 1px #ff9c09 solid;
     border-radius: 5px;
-    padding: 2px;
+    padding: 5px;
 }
 
 #search{
@@ -38,6 +38,8 @@
     background-color: #fff;
     outline: none;
 }
+
+
 
 .search_btn{
     background-color: #fff;
@@ -99,6 +101,7 @@
     padding: 0px 10px;
     font-size: large;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 

@@ -16,7 +16,7 @@ const Navbar = () => {
           </div>
           <div className="navbar_right">
           <div className="search_container">
-            <label htmlFor="search">
+            <label htmlFor="search" style ={{marginRight: "5px"}}>
               <MdLocationOn /> शहर चुनें{" "}
             </label>
             <input
