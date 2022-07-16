@@ -1,0 +1,26 @@
+.article_banner{
+    /* padding: 20px; */
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.side_article_banner{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.side_article_container{
+    margin: 20px;
+}
+
+.article_container{
+    width: 100%;
+}
+
+.row_flex{
+    justify-content: space-around;
+}
+
+.section{
+    padding: 20px;
+}

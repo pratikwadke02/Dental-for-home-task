@@ -1,0 +1,35 @@
+.article_header_container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+}
+
+.topic_outer_container{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-color: #ff9c09;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+
+.topic_inner_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: #ffc609b6 !important;
+    width: 80px;
+    height: 28px;
+    border-radius: 5px;
+}
+
+.partition_container{
+    border-bottom: #ff9c09 1px solid;
+    width: 100%;
+}

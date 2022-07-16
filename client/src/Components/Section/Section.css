@@ -1,0 +1,13 @@
+.section_card{
+    margin: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.section_card_details{
+    padding: 10px;
+}
+
+.row_flex{
+    justify-content: space-between;
+}
