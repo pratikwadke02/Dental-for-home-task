@@ -1,0 +1,104 @@
+.navbar_uppper_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 100px;
+    background-color: #fff;
+}
+
+.app_navbar_logo{
+    display: flex;
+    align-items: center;
+}
+
+.navbar_right{
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bolder;
+}
+
+.search_container{
+    border: 1px #ff9c09 solid;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#search{
+    width: 300px;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-left: 1px solid #ccc;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #ccc;
+    background-color: #fff;
+    outline: none;
+}
+
+.search_btn{
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-left: 1px solid #ccc;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.add_news_btn{
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background-color: #ff9c09;
+    outline: none;
+    cursor: pointer;
+}
+
+.profile_btn{
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background-color: #ff9d095d;
+    outline: none;
+    cursor: pointer;
+}
+
+.navbar_lower_container{
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar_lower_container ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.navbar_lower_container ul li{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+
