@@ -2,21 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
+require('./routes/routes.js')(app);
 var bodyParser = require('body-parser');
 
-var corsOptions = {
-    origin: 'http://localhost:8081',
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json()); 
-
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 
 app.use(express.static(__dirname + "/public"));
-
-
 
 const db = require('./models');
 db.sequelize.sync().then(() => {
@@ -30,10 +25,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 }
 );
-
-require('./routes/routes.js')(app);
-
-
 
 PORT = process.env.PORT || 8080;
 

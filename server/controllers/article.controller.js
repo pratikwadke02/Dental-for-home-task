@@ -43,7 +43,7 @@ exports.create = async (req, res) => {
 exports.findAll = (req, res) => {
     Article.findAll().then(data => {
         console.log(data);
-        res.send(data);
+        res.status(200).json({data});
     }
     ).catch(err => {
         res.status(500).send({

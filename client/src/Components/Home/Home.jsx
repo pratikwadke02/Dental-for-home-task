@@ -6,8 +6,20 @@ import Article from '../Article/Article'
 import ArticleHeader from '../ArticleHeader/ArticleHeader'
 import SideArticle from '../Article/SideArticle'
 import { images } from '../../constants'
+import { getArticles } from '../../actions/articles'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 
 const Home = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getArticles());
+  }
+  , [dispatch]);
+
+
   return (
     <>
     <Navbar />
