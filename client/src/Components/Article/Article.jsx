@@ -7,38 +7,41 @@ import "./Article.css";
 
 const Article = () => {
 
-  const articles = useSelector(state => state.articles.articles);
-  console.log(articles);
+  const articles = (useSelector(state => state.articles.articlesData)[0]);
 
   return (
     <>
       <div className="article_header_container">
-        <ArticleHeader topic="व्यापार" />
+        <ArticleHeader topic={articles.title} />
       </div>
       <div className="article_container">
         <div className="row_flex">
           <div className="col_flex">
             <div className="row_flex">
               <div className="section">
-                <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+              <Section
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
+                />
+               <Section
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
                 <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
                 <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
-                />
-                <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
               </div>
               <div className="section">
@@ -52,14 +55,16 @@ const Article = () => {
                   />
                 </div>
                 <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
                 <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
               </div>
             </div>

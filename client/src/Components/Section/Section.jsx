@@ -15,7 +15,10 @@ const Section = (props) => {
             </div>
             <div className='row_flex'>
             <div>
-            {props.dateTime}
+            {(props.date).slice(0,10)}
+            </div>
+            <div>
+            {props.time}
             </div>
             <div>
             <BsFillShareFill />

@@ -1,10 +1,6 @@
 const db = require('../models');
 const Article = db.article;
-const Op = db.Sequelize.Op;
-const storage = require('../middleware/multer');
-const multer = require('multer');
 const { cloudinaryUploadImage } = require('../middleware/cloudinary');
-const { imageUpload } = require('../middleware/multer');
 
 
 exports.create = async (req, res) => {
@@ -29,7 +25,6 @@ exports.create = async (req, res) => {
         time: req.body.time
     };
     Article.create(article).then(data => {
-        console.log(data);
         res.send(data);
     }
     ).catch(err => {
@@ -42,7 +37,6 @@ exports.create = async (req, res) => {
 
 exports.findAll = (req, res) => {
     Article.findAll().then(data => {
-        console.log(data);
         res.status(200).json({data});
     }
     ).catch(err => {

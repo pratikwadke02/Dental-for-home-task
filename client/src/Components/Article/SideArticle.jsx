@@ -3,33 +3,41 @@ import { images } from "../../constants";
 import ArticleHeader from "../ArticleHeader/ArticleHeader";
 import Section from "../Section/Section";
 import './Article.css';
+import { useSelector } from "react-redux";
 
 const SideArticle = () => {
+
+  const articles = (useSelector(state => state.articles.articlesData)[0]);
+
   return (
     <>
     <div className="side_article_container">
         <div className="col_flex">
         <div className="section">
-            <ArticleHeader topic="व्यापार" />
-            <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+            <ArticleHeader topic={articles.title} />
+                <Section
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
-            <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+                <Section
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
-            <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+                <Section
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
-            <Section
-                  desc="पाक युवती के प्यार में सरहद पार कर गया फर्रुखाबाद का लड़का अब..."
-                  dateTime="Tue, 21 Jun 2022 04:35 PM"
-                  image={images.section}
+                <Section
+                  desc={articles.desc}
+                  date={articles.date}
+                  time={articles.time}
+                  image={articles.image}
                 />
         </div>
         <div className="side_article_banner">

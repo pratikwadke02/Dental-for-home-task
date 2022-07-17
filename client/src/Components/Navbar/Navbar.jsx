@@ -15,30 +15,28 @@ const Navbar = () => {
             <h1>अग्रजन सेवक मीडिया नेटवर्क</h1>
           </div>
           <div className="navbar_right">
-          <div className="search_container">
-            <label htmlFor="search" style ={{marginRight: "5px"}}>
-              <MdLocationOn /> शहर चुनें{" "}
-            </label>
-            <input
-              type="text"
-              id="search"
-              placeholder="खोजने के लिए यहां टाइप करें"
-            />
-            <button
-              className="search_btn
-            "
-            >
-              <AiOutlineSearch />
-            </button>
-          </div>
-          <div className="add_news">
-            <button className="add_news_btn">
-              <IoIosAddCircle /> खबरे जोड़ें
-            </button>
-          </div>
-          <div className="profile">
-            <button className="profile_btn">Ankush Jain</button>
-          </div>
+            <div className="search_container">
+              <label htmlFor="search" style={{ marginRight: "5px" }}>
+                <MdLocationOn /> शहर चुनें{" "}
+              </label>
+              <input
+                type="text"
+                id="search"
+                placeholder="खोजने के लिए यहां टाइप करें"
+              />
+              <button
+                className="search_btn">
+                <AiOutlineSearch />
+              </button>
+            </div>
+            <div className="add_news">
+              <button className="add_news_btn">
+                <IoIosAddCircle /> खबरे जोड़ें
+              </button>
+            </div>
+            <div className="profile">
+              <button className="profile_btn">Ankush Jain</button>
+            </div>
           </div>
         </div>
         <div className="navbar_lower_container">

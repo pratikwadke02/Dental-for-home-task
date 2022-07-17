@@ -1,17 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-
-require('./routes/routes.js')(app);
-var bodyParser = require('body-parser');
-
-
-app.use(cors());
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({ extended: true })); 
-
-
-app.use(express.static(__dirname + "/public"));
+const bodyParser = require('body-parser');
 
 const db = require('./models');
 db.sequelize.sync().then(() => {
@@ -21,13 +11,28 @@ db.sequelize.sync().then(() => {
 }
 );
 
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(cors());
+
+
+require('./routes/routes.js')(app);
+app.use(express.static(__dirname + "/public"));
+
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 }
 );
 
-PORT = process.env.PORT || 8080;
+app.get('/cors', (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
+    res.send('Hello World!');
+}
+);
 
+
+PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
    console.log(`Server is running on port ${PORT}.`);
 });

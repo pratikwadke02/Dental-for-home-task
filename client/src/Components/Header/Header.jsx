@@ -14,6 +14,7 @@ const Header = () => {
           alt="First slide"
           height={500}
           width={750}
+          style={{borderRadius: '10px'}}
         />
         <Carousel.Caption>
           <h3>बरेली के मेडिसिटी हॉस्पिटल के डॉक्टर चार पर केस दर्ज </h3>
@@ -26,6 +27,7 @@ const Header = () => {
           alt="Second slide"
           height={500}
           width={750}
+          style={{borderRadius: '10px'}}
         />
         <Carousel.Caption>
           <h3>बरेली के मेडिसिटी हॉस्पिटल के डॉक्टर चार पर केस दर्ज </h3>
@@ -38,6 +40,7 @@ const Header = () => {
           alt="Third slide"
           height={500}
           width={750}
+          style={{borderRadius: '10px'}}
         />
         <Carousel.Caption>
           <h3>बरेली के मेडिसिटी हॉस्पिटल के डॉक्टर चार पर केस दर्ज </h3>
