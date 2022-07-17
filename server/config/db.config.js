@@ -2,7 +2,7 @@ module.exports = {
     host: 'localhost',
     user: 'root',
     password: 'pratik02',
-    database: 'vaccine_management',
+    database: 'dental_home_task',
     dialect: 'mysql',
     pool: {
         max: 5,

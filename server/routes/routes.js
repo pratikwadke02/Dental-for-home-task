@@ -1,10 +1,13 @@
-module.exports = app => {
-    const article = require('../controllers/article.controller.js');
+const  {imageUpload}  = require("../middleware/multer.js");
 
-    const router = require('express').Router();
 
-    router.post("/", article.create);
-    router.get("/", article.findAll);
+module.exports = (app) => {
+  const article = require("../controllers/article.controller.js");
 
-    app.use('/api/articles', router);
+  const router = require("express").Router();
+
+  router.post("/create",imageUpload.single("image"), article.create);
+  router.get("/get_articles", article.findAll);
+
+  app.use("/api/articles", router);
 };

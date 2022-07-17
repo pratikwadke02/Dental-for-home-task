@@ -9,10 +9,14 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             allowNull: false
         },
-        // image: {
-        //     type: Sequelize.image,
-        //     allowNull: false
-        // },
+        desc: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+        image: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
         date: {
             type: Sequelize.DATE,
             allowNull: false

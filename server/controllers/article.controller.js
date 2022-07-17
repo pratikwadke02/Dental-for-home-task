@@ -1,30 +1,63 @@
 const db = require('../models');
 const Article = db.article;
 const Op = db.Sequelize.Op;
+const storage = require('../middleware/multer');
+const multer = require('multer');
+const { cloudinaryUploadImage } = require('../middleware/cloudinary');
+const { imageUpload } = require('../middleware/multer');
 
-exports.create = (req, res) => {
-    // Save article in database
-    Article.create({
+
+exports.create = async (req, res) => {
+    if(!req.body.title || !req.body.desc || !req.body.date || !req.body.time) {
+        return res.status(400).send({
+            message: "Article content can not be empty"
+        });
+    }
+    if(!req.file){
+        return res.status(400).send({
+            message: "Article image can not be empty"
+        });
+    }
+
+    // console.log(req.file.filename);
+    const localPath = `uploads/${req.file.filename}`;
+    // console.log(localPath);
+    const uploadedImg = await cloudinaryUploadImage(localPath);
+    console.log(uploadedImg.url);
+    const article = {
         title: req.body.title,
-        image: req.body.image,
+        desc: req.body.desc,
+        image: uploadedImg.url,
         date: req.body.date,
         time: req.body.time
-    }).then(article => {
-        res.send(article);
-    }).catch(err => {
+    };
+    Article.create(article).then(data => {
+        console.log(data);
+        res.send(data);
+    }
+    ).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while creating the Article."
+            message: err.message || "Some error occurred while creating the article."
         });
-    });
+    }
+    );
 }
 
 exports.findAll = (req, res) => {
-    // Retrieve all articles from database
-    Article.findAll({}).then(articles => {
-        res.send(articles);
-    }).catch(err => {
+    Article.findAll().then(data => {
+        console.log(data);
+        res.send(data);
+    }
+    ).catch(err => {
         res.status(500).send({
             message: err.message || "Some error occurred while retrieving articles."
         });
-    });
+    }
+    );
+}
+
+exports.uploadImage = (req, res) => {
+    console.log("hello");
+    console.log(req.file)
+    return res.status(200).send(req.file);
 }
