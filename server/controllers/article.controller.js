@@ -18,10 +18,7 @@ exports.create = async (req, res) => {
             message: "Article image can not be empty"
         });
     }
-
-    // console.log(req.file.filename);
     const localPath = `uploads/${req.file.filename}`;
-    // console.log(localPath);
     const uploadedImg = await cloudinaryUploadImage(localPath);
     console.log(uploadedImg.url);
     const article = {
@@ -54,10 +51,4 @@ exports.findAll = (req, res) => {
         });
     }
     );
-}
-
-exports.uploadImage = (req, res) => {
-    console.log("hello");
-    console.log(req.file)
-    return res.status(200).send(req.file);
 }
